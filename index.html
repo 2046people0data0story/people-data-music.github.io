@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+Page    : Home Page
+Version : 1.0
+Author  : Surjith S M
+URI     : http://themeforest.net/user/surjithctly
+
+Copyright © All rights Reserved
+Surjith S M / @surjithctly
+
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to George's World!</title>
+    <meta name="description" content="I love everything about people, data, and music!" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900%7CMontserrat:400,500,700" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link href="css/plugins/plugins-combined.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/lib/modernizr-min.js"></script>
+</head>
+
+<body id="top" class="preload">
+    <!-- ============================================================
+     PAGE LOADING 
+     ============================================================ -->
+    <div id="page-loader" class="loading-wrap">
+        <span class="loading-text">Loading George's Portfolio</span>
+        <div class="loading-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <!-- // End Page Loading -->
+    <!-- ============= FLEXBOX AUDIO PLAYER ============== -->
+    <div class="audio-player">
+        <a href="javascript:;" class="hide_player"><i class="fa fa-angle-down"></i> HIDE</a>
+        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+        <!-- Audio Player -->
+        <!-- Visual Container -->
+        <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+            <div class="jp-type-playlist">
+                <!-- Flexbox -->
+                <div class="jp-gui jp-interface flex-wrap">
+                    <!-- Play / Pause... Controls -->
+                    <div class="jp-controls flex-item">
+                        <button class="jp-previous" tabindex="0"><i class="fa fa-step-backward"></i></button>
+                        <button class="jp-play" tabindex="0"><i class="fa fa-play"></i></button>
+                        <button class="jp-next" tabindex="0"><i class="fa fa-step-forward"></i></button>
+                    </div>
+                    <!-- End Flex Item -->
+                    <!-- Progress bar -->
+                    <div class="jp-progress-container flex-item">
+                        <!-- Progress Time -->
+                        <div class="jp-time-holder">
+                            <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
+                            <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
+                        </div>
+                        <!-- End Time holder -->
+                        <!-- Progress bar -->
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar">
+                                    <div class="bullet">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Progress bar -->
+                    </div>
+                    <!-- End Flex Item -->
+                    <!-- Album & Artist Info -->
+                    <a href="javascript:void(0);" id="playlist-text">
+                        <div class="jp-now-playing flex-item">
+                            <div class="jp-track-name"></div>
+                            <div class="jp-artist-name"></div>
+                        </div>
+                    </a>
+                    <!-- End Flex Item -->
+                    <!-- Loop / Shuffle / Playlist Toggles -->
+                    <div class="jp-toggles flex-item">
+                        <!-- Playlist Toggle -->
+                        <button id="playlist-toggle" class="jp-show-playlist" tabindex="0" title="Playlist"><i class="fa fa-music"></i></button>
+                        <!-- Shuffle Toggle -->
+                        <button class="jp-shuffle" tabindex="0" title="Shuffle">
+                            <i class="fa fa-random"></i></button>
+                        <!-- Repeat Toggle -->
+                        <button class="jp-repeat" tabindex="0" title="Repeat"><i class="fa fa-exchange"></i></button>
+                    </div>
+                    <!-- End Flex Item -->
+                    <!-- Volume controls -->
+                    <div class="jp-volume-controls flex-item">
+                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-up"></i></button>
+                        <!-- Volume Bar -->
+                        <div class="jp-volume-bar">
+                            <div class="jp-volume-bar-value">
+                                <div class="bullet">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Volume Bar -->
+                    </div>
+                    <!-- End Flex Item -->
+                </div>
+                <!-- End Flexbox -->
+                <!-- Playlist -->
+                <div id="playlist-wrap" class="jp-playlist">
+                    <ul>
+                        <li>&nbsp;</li>
+                    </ul>
+                </div>
+                <!-- End Playlist -->
+                <!-- No Flash / No HTML5 Warning -->
+                <div class="jp-no-solution">
+                    <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
+            </div>
+            <!-- Player Type Playlist -->
+        </div>
+        <!-- End Contaner -->
+    </div>
+    <!-- //End Fixed Audio Player -->
+    <!-- ================= HEADER ================= -->
+    <nav class="navbar navbar-default navbar-fixed-top js-on-scroll">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="flaticon-interface"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" width="150" height="30" alt="logo"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="menu-trigger">
+                    <a href="#">
+                        <span class="flaticon-interface"></span>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-right toggle-menu">
+                    <li><a href="#top">HOME </a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#album">DATA SCIENCE</a></li>
+                    <li><a href="#team">PEOPLE ANALYTICS</a></li>
+                    <li><a href="#featured-album">MUSIC</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- ============================================================
+         Header Slider
+         ============================================================ -->
+    <header class="slider-bg has-parallax" id="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 clearfix">
+                    <div class="slider-wrap">
+                        <div class="header-slider">
+                            <div class="header-slide">
+                                <div class="hero-wrap">
+                                    <div class="no-overflow">
+                                        <div class="hero-block">
+                                            <h1 class="hero-title">Hello there!</h1>
+                                            <h1 class="hero-text">Welcome to my world :)</h1>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // end .header-slide -->
+                            <div class="header-slide">
+                                <div class="hero-wrap">
+                                    <div class="no-overflow">
+                                        <div class="hero-block">
+                                            <h1 class="hero-title hero-title-fit1">I love everything about</h1>
+                                            <h1 class="hero-text"> people ｜ data ｜ music</h1>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // end .header-slide -->
+                        </div>
+                        <!-- // end .header-slider -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--// HEADER END -->
+    <!-- ================= ABOUT  ================= -->
+    <section class="section-padding about clearfix" id="about">
+        
+        <div class="container">
+            <div class="row">
+                <div class="band-wrap">
+                    <div class="col-md-8 col-md-pull">
+                        <h2 class="section-title">ABOUT ME</h2>
+                        <p class="section-subtitle">I believe in the power of sound</p>
+                        <p class="section-subtitle-thin">
+                            Singing in 4 languages and having explored 4 continents, I discovered the universal human need to listen and be heard. The more people I share music with, the more confident I am in its power in helping us find a common ground in this chaotic world. <br><br>Engaging technology and analytics, I wish to promote the voice of the vulnerable and curate audio experiences that most resonate with our authentic values. </p>
+                        <br><br><a href="https://www.linkedin.com/in/muyi-george-nie/" class="btn btn-primary">MY LINKEDIN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// ABOUT END -->
+
+    <!-- ================= ALBUM ================= -->
+    <section class="section-padding album" id="album">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="album-wrap">
+                        <h2 class="album-title"><span>DATA SCIENCE PROJECTS</span></h2>
+                        <p class="album-subtitle"> I'm fascinated by the innovation-heavy world of Tech, and I'm crunching on real-world data to hone my technical skills and improve my business acumen. </p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="https://colab.research.google.com/drive/12c7pPiW61GMcASuWfr2eW-cr-5T4ZuKM?usp=sharing" class="album-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-01.jpg" class="img-responsive" alt="album">
+                                        <div class=" atvImg-layer" data-img="images/album-img-01.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Amazon Prime Film Performance Prediction & Analysis</span>
+                                    <p class="album-block-subtitle">Created algorithms to predict movie performance so we can curate best streaming experiences for our audience.<br><a href="https://colab.research.google.com/drive/12c7pPiW61GMcASuWfr2eW-cr-5T4ZuKM?usp=sharing">[Google Colab]</a> </p>
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://colab.research.google.com/drive/1uvYwePHekJPsD7OJQTh1you0S4wPLbbC?usp=sharing" class="album-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-02.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-02.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">E-commerce Reviews Analysis & Topic Modeling</span>
+                                    <p class="album-block-subtitle">Leverage natural language processing techniques to better understand customers' opinions and need. <br><a href="https://colab.research.google.com/drive/1uvYwePHekJPsD7OJQTh1you0S4wPLbbC?usp=sharing">[Google Colab]</a> </p>
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://colab.research.google.com/drive/1GBDa9emP5hWm2dSv10GRdl8YbWzDTaLg?usp=sharing" class="album-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-03.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-03.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Banking Customer Churn Prediction  Analysis</span>
+                                    <p class="album-block-subtitle"> Developed predictive algorithms for banking service vendors to identify root causes of customer churn.
+                                    <br><a href="https://colab.research.google.com/drive/1GBDa9emP5hWm2dSv10GRdl8YbWzDTaLg?usp=sharing">[Google Colab]</a></p>
+
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// ALBUM END -->
+
+    <!-- ================= OUR TEAM ================= -->
+    <section class="section-padding team clearfix has-parallax" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="team-wrap">
+                        <h2 class="team-title"><span>PEOPLE ANALYTICS PROJECTS</span></h2>
+                        <p class="team-subtitle">
+                            Studying Industrial-Organisational Psychology at New York University, I'm also passionate about finding stories and insights behind people data.<br><br>I wish to contribute to a future world of work by bringing positive impact to the workplace where employees can retain their authentic self and find meaning and value in their work.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="https://docs.google.com/document/d/1AmxqhZNWPcbkkvt0TXv05Wz3j_iFpTuQS9MnQRXRIwY/edit?usp=sharing" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-04.jpg" class="img-responsive" alt="album">
+                                        <div class=" atvImg-layer" data-img="images/album-img-04.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Police Department Selection Process Redesign</span>
+                                    <p class="album-block-subtitle"> Demanding reform and justice, I ran a series of test item analyses and validation to find out how to select conscientious and empathetic police officers. <br><a href="https://docs.google.com/document/d/1AmxqhZNWPcbkkvt0TXv05Wz3j_iFpTuQS9MnQRXRIwY/edit?usp=sharing">[Report]</a> <a href="https://colab.research.google.com/drive/1zStfY5pQvzO7UFcPhPFixRL4_Tdam3U3?usp=sharing">[Python Code]</a>  </p>
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://www.canva.com/design/DAD0HpxyUC0/DF7NnzsryCdeqD59Hw2j-w/view#1" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-05.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-05.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">The Wharton School People Analytics Competition</span>
+                                    <p class="album-block-subtitle">Finalist in The Wharton School People Analytics Case Competition. Examined the impact of talent mobility on employee career success for UNICEF & UNDP. <br>
+                                        <a href="https://www.canva.com/design/DAD0HpxyUC0/DF7NnzsryCdeqD59Hw2j-w/view#1">[Presentation]</a> 
+                                        <a href="https://www.youtube.com/watch?v=3X_tu1O_kcc&feature=youtu.be&t=1">[Youtube]</a>
+                                        <a href="https://wpa.wharton.upenn.edu/2020-conference-competition-winners/">[Wharton Page]</a></p>
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://github.com/2046people0data0story/NYUTechSHRMPeopleAnalyticsHackathon_PsychoLogits" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-06.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-06.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">New York University People Analytics Hackathon</span>
+                                    <p class="album-block-subtitle"> Finalist in the People Analytics Hackathon hosted by NYU, where we applied machine learning to address turnover among healthcare professionals.
+                                    <br><a href="https://github.com/2046people0data0story/NYUTechSHRMPeopleAnalyticsHackathon_PsychoLogits">[Github Repository]</a></p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="team-wrap">
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="https://www.canva.com/design/DAD5jvYsPsw/ur3lz8oPcvQlKWtaP50MYA/view" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-07.jpg" class="img-responsive" alt="album">
+                                        <div class=" atvImg-layer" data-img="images/album-img-07.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Columbia University Consulting Case Competition</span>
+                                    <p class="album-block-subtitle"> Runner-up in the Competition. Worked with a global advertising giant on improving their virtual team process and communication. <br><a href="https://www.canva.com/design/DAD5jvYsPsw/ur3lz8oPcvQlKWtaP50MYA/view">[Presentation]</a> </a>  </p>
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://drive.google.com/file/d/1pX7ht_8XnI9eRJ6F8kkkk3tJbQh0O5n-/view" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-08.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-08.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Merger & Acquisition (Google & Fitbit)</span>
+                                    <p class="album-block-subtitle">Facilitated the human capital integration of Google's planned acquisition of Fitbit in 2019, the tech giant in wearable technology.  <br>
+                                        <a href="https://drive.google.com/file/d/1pX7ht_8XnI9eRJ6F8kkkk3tJbQh0O5n-/view">[Strategic Plan]</a> 
+                                </div>
+                            </div>
+                            <!-- // end .col-md-4 -->
+                            <div class="col-md-4">
+                                <a href="https://drive.google.com/file/d/1b5cYkHco9_tLm9UfLpXPQwWuV86Wloqo/view" class="team-cover">
+                                    <div class="atvImg">
+                                        <img src="images/album-img-09.jpg" class="img-responsive" alt="album">
+                                        <div class="atvImg-layer" data-img="images/album-img-09.jpg"></div>
+                                    </div>
+                                </a>
+                                <div class="album-block">
+                                    <span class="album-block-title">Facebook D&I Training Evaluation </span>
+                                    <p class="album-block-subtitle"> Passionate about LGBTQ+ Workplace Inclusion, I created a comprehensive training evaluation plan for Facebook's Unconscious Bias Training program.
+                                    <br><a href="https://drive.google.com/file/d/1b5cYkHco9_tLm9UfLpXPQwWuV86Wloqo/view">[Strategic Plan]</a></p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--// OUR TEAM END -->
+    <!-- ================= TEAM PROFILE POPUP ================= -->
+    <!-- || Team Member 01 Profile Popup Card ||-->
+    <div id="team-modal-1" class="white-popup mfp-with-anim mfp-hide">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="images/team-1.jpg" class="img-responsive team-modal-img" alt="team-pic">
+            </div>
+            <div class="col-sm-7">
+                <div class="team-popup-desc">
+                    <h3 class="team-popup-title">Roy Gutierrez</h3>
+                    <h4 class="muted">The Guitarist</h4>
+                    <p class="lead">Appropriately implement cross-unit services after next-generation human capital. </p>
+                    <!-- // end .lead -->
+                    <p class="team-popup-text">Distinctively coordinate team building architectures rather than flexible growth strategies. Appropriately implement cross-unit services after next-generation human capital. </p>
+                    <div class="social-icons team-social">
+                        <ul>
+                            <li><a href="#"><span class="flaticon-social-1 flaticon-sm-shape shape1"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-media-1 flaticon-sm-shape shape2"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-network-1 flaticon-sm-shape shape3"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- || Team Member 02 Profile Popup Card ||-->
+    <div id="team-modal-2" class="white-popup mfp-with-anim mfp-hide">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="images/team-2.jpg" class="img-responsive team-modal-img" alt="team-pic">
+            </div>
+            <div class="col-sm-8">
+                <div class="team-popup-desc">
+                    <h3 class="team-popup-title">Hannah Valdez</h3>
+                    <h4 class="muted">Female Singer</h4>
+                    <p class="team-popup-text">Distinctively coordinate team building architectures rather than flexible growth strategies. Appropriately implement cross-unit services after next-generation human capital. </p>
+                    <div class="social-icons team-social">
+                        <ul>
+                            <li><a href="#"><span class="flaticon-social-1 flaticon-sm-shape shape1"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-media-1 flaticon-sm-shape shape2"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-network-1 flaticon-sm-shape shape3"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- || Team Member 03 Profile Popup Card ||-->
+    <div id="team-modal-3" class="white-popup mfp-with-anim mfp-hide">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="images/team-3.jpg" class="img-responsive team-modal-img" alt="team-pic">
+            </div>
+            <div class="col-sm-7">
+                <div class="team-popup-desc">
+                    <h3 class="team-popup-title">Phillip Lucas</h3>
+                    <h4 class="muted">Rock Singer</h4>
+                    <p class="lead">Appropriately implement cross-unit services after next-generation human capital. </p>
+                    <!-- // end .lead -->
+                    <p class="team-popup-text">Distinctively coordinate team building architectures rather than flexible growth strategies. Appropriately implement cross-unit services after next-generation human capital. </p>
+                    <div class="social-icons team-social">
+                        <ul>
+                            <li><a href="#"><span class="flaticon-social-1 flaticon-sm-shape shape1"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-media-1 flaticon-sm-shape shape2"></span></a></li>
+                            <li><a href="#"><span class="flaticon-social-network-1 flaticon-sm-shape shape3"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= OUR ADMIRE 01 ================= -->
+    <section class="admire clearfix" id="featured-album">
+        <div class="object-fit-container">
+            <a href="javascript:;" class="audio-play-btn" data-playlist-id="10">
+                <img src="images/admire-bg.jpg" class="img-responsive compact-img" alt="admire-bg">
+                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-md-push-5">
+                    <div class="admire-block">
+                        <h3 class="admire-title">MUSIC IS MY LIFE</h3>
+                        <h5 class="admire-subtitle"></h5>
+  
+                        <p class="admire-subtitle02">
+                            Not a single day has gone by where I didn't spend time daydreaming with my favorite musicians and exploring what's going on in the world of music. <br><br>Click the pink button below for the most exciting essay on the audio industry I've read in 2020 by Matthew Ball.
+
+                        </p>
+                        <a href="https://www.matthewball.vc/all/audiotech" class="btn btn-danger">GET INSPIRED! </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// OUR ADMIRE 01 END -->
+
+    <!-- ================= OUR ADMIRE 02 ================= -->
+    <section class="admire clearfix" id="featured-album2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="admire-block">
+                        <h3 class="admire-title-clr"> THE HARMONICS</h3>
+                        <h5 class="admire-subtitle-clr">Don't be silenced. Be heard!</h5>
+                        <p class="admire-subtitle02">
+                            During my time as a Bass in THE HARMONICS, the first ever LGBTQ+ Choir in Hong Kong, I found my true colors through singing. Scroll down to view some of my favorite concert performance! 
+                        </p>
+                        <a href="https://www.facebook.com/theharmonicshk/videos/?ref=page_internal" class="btn btn-success">OUR FACEBOOK</a>
+                        <a href="https://www.youtube.com/channel/UC2Pc60HLs9ZfZ2rh1KxWP8Q" class="btn btn-primary">OUR YOUTUBE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-wrap-right">
+            <a href="javascript:;" class="audio-play-btn" data-playlist-id="10">
+                <img src="images/admire-02.jpg" class="img-responsive compact-img" alt="admire-02">
+                
+            </a>
+        </div>
+    </section>
+    <!--// OUR ADMIRE 02 END -->
+   
+    <!-- ================= MEDIA ================= -->
+    <section class="section-padding our-media has-parallax" id="media">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="media-title"><span>MY PERFORMANCE</span></h2>
+                    <p class="media-subtitle">In 2019, we launched "A NIGHT AT THE MOVIES" Concert in front of a 500+ audiences. It covered pieces from 80s movies and medleys of recent GRAMMY songs. Enjoy!</p>
+                </div>
+                <div class="btn-position">
+                    <div class="tab-position">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="tabset-left active" role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab">AUDIOS</a></li>
+                            <li class="tabset-right" role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">VIDEOS</a></li>
+                        </ul>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!-- ================== AUDIO TAB ====================== -->
+                        <div role="tabpanel" class="tab-pane audio-tab active" id="audio">
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="0">
+                                        <a href="javascript:;">
+                                            <span class="flaticon-play flaticon-sm"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>Bohemian Rhapsody</span>
+                                        <p>A fun A Capella arrangement of Queen’s all-time favorite (I'm proud of it!)  </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/bohemian-rhapsody-the/s-QLTsvMyZv30#t=0:29" class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="1">
+                                        <a href="javscript:;">
+                                            <span class="flaticon-play flaticon-sm"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>Star Wars (John Williams is the Man)</span>
+                                        <p>Join the QUEER side. We have rainbow :) </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/star-wars-the-harmonics-choir/s-VDkpubF9l6S" class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="2">
+                                        <a href="javascript:;"><span class="flaticon-play flaticon-sm"></span></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>Stand By Me / Lean On Me</span>
+                                        <p>A creative mash-up for you when you need a friend </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/stand-by-me-lean-on-me-the/s-Ta71dJVoKRP" class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="3">
+                                        <a href="javascript:;">
+                                            <span class="flaticon-play flaticon-sm"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>Mamma Mia!</span>
+                                        <p>Do you still remember your first love and your broken heart? </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/mama-mia-the-harmonics-choir/s-hjdFWRTyU5z"class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>    
+
+                            <div class="clearfix"></div>
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="4">
+                                        <a href="javascript:;">
+                                            <span class="flaticon-play flaticon-sm"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>Shallow</span>
+                                        <p>Aren't you tired trying to fill that void?  </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/shallow-the-harmonics-choir/s-WoQ93zNlCom"class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>    
+
+                           <div class="clearfix"></div>
+                            <div class="audio-wrap">
+                                <div class="col-xs-12 col-sm-1 col-md-1">
+                                    <div class="audio-play-btn" data-playlist-id="5">
+                                        <a href="javascript:;">
+                                            <span class="flaticon-play flaticon-sm"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-9">
+                                    <div class="audio-title">
+                                        <span>海闊天空(Far Away)</span>
+                                        <p>An iconic 90s piece about hopes, dreams, and freedoms by Hong Kong rock band Beyond </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="audio-buy">
+                                        <a href="https://soundcloud.com/george-muyi-nie/far-away-the-harmonics-choir/s-0vyGURg9aYH"class="btn btn-defualt">Open SoundCloud</a>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="clearfix"></div>
+
+                            <div class="sound-cloud">
+                                <!-- ============================================================
+                                 Tip: Replace the below code with your Soundcloud Embed Iframe
+                                 ============================================================= -->
+                                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1156547389%3Fsecret_token%3Ds-idRNi5AunO5&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/george-muyi-nie" title="George N" target="_blank" style="color: #cccccc; text-decoration: none;">George N</a> · <a href="https://soundcloud.com/george-muyi-nie/sets/a-night-at-the-movies-concert-the-harmonics" title="&quot;A Night at the Movies&quot; Concert - The Harmonics" target="_blank" style="color: #cccccc; text-decoration: none;">&quot;A Night at the Movies&quot; Concert - The Harmonics</a></div>
+                            </div>
+
+
+                        </div>
+                        <!-- // End Audio Tab -->
+                        <!-- ================== VIDEO TAB ====================== -->
+                        <div role="tabpanel" class="tab-pane" id="video">
+                            <!-- ============================================================
+                            Tip: Change the href Video to your Youtube or Vimeo Video LInk
+                            PS : The Video Popup may not work locally if accessing via file://
+                                 So, Please upload to your server to test that. 
+                             ============================================================= -->
+                            <div class="video-wrap">
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.facebook.com/1206093096/videos/10224353533005034/" class="mfp-youtube">
+                                            <img src="images/video01.jpg" class="img-responsive" alt="video01">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.youtube.com/watch?v=qQ1Z_8OWZgU" class="mfp-youtube">
+                                            <img src="images/video02.jpg" class="img-responsive" alt="video02">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.youtube.com/watch?v=nBJcLBAJogI&feature=youtu.be" class="mfp-youtube">
+                                            <img src="images/video03.jpg" class="img-responsive" alt="video03">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.youtube.com/watch?v=BbKhfX8AVP8" class="mfp-youtube">
+                                            <img src="images/video04.jpg" class="img-responsive" alt="video04">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.youtube.com/watch?v=wdoNpkToGDg" class="mfp-youtube">
+                                            <img src="images/video05.jpg" class="img-responsive" alt="video05">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="video-img-block">
+                                        <a href="https://www.youtube.com/watch?v=NfXydZBKjRk" class="mfp-youtube">
+                                            <img src="images/video06.jpg" class="img-responsive" alt="video06">
+                                            <div class="video-play-btn">
+                                                <span class="flaticon-play flaticon-sm"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // End Video Tab -->
+                    </div>
+                    <!-- // End Tab Content -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// MEDIA END -->
+
+    <!-- ================= CONTACT  ================= -->
+    <section class="section-padding contact" id="contact">
+            <div class="row">
+                <div class="col-md-12">        
+        <div class="container">
+            <div class="row">
+                <div class="band-wrap">
+                    <div class="col-md-8 col-md-pull">
+                        <h2 class="section-title">SAY HELLO</h2>
+                        <p class="section-subtitle">I would love to connect!  <br><br>
+                        <a href="mailto: georgemuyinie@gmail.com" class="btn btn-primary">SEND EMAIL</a></p>
+                        <p class="section-subtitle-thin">
+                             </p>
+                        <a href="https://www.linkedin.com/in/muyi-george-nie/" class="btn btn-primary">MY LINKEDIN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//  CONTACT -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="section-padding has-parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="address">
+                        <h5>Copyright © George Nie 2020. All rights reserved.</h5>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--// FOOTER END -->
+    <a class="back_to_top" href="#top"> <img src="images/back-to-top.png" alt="Back to top" /> </a>
+    <!-- // end .back_to_top -->
+    <!-- jQuery & Other Javascript Files -->
+    <script src="js/lib/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/lib/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="js/plugins/flexslider-min.js"></script>
+    <script src="js/plugins/slick.min.js"></script>
+    <script src="js/plugins/magnific-popup.min.js"></script>
+    <script src="js/plugins/parallax.js"></script>
+    <script src="js/plugins/rellax.min.js"></script>
+    <script src="js/plugins/atvimg.js"></script>
+    <script src="js/plugins/jquery.jplayer.min.js"></script>
+    <script src="js/plugins/jplayer.playlist.min.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/subscribe.js"></script>
+    <!-- Main Duotone script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
